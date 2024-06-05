@@ -277,19 +277,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# 结果
-# 暂不保留所有结果
-result*
-
-# # raw_data不上传
-# raw_data*
-
-# tokenizers暂时先不上传
-# dataset/raw_data/zh_table/**
-# !dataset/raw_data/zh_table/.gitkeep
-
-# slurm日志
+# slurm log
 slurm*
 
-# niah历史记录
+# niah history
 history

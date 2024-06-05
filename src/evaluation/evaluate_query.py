@@ -15,7 +15,7 @@ model2maxlen = {
 }
 
 TASK_NAME_LIST = ['zh_norm', 'en_norm', 'zh_kg', 'en_kg', 'zh_table', 'zh_medcase', 'zh_counting', 'en_counting']
-BASE_DIR = '/ailab/user/sunhongli/workspace/MedLongContextEval/query_result'
+BASE_DIR = '../../evaluation_result/query_result'
 result_files = glob.glob(BASE_DIR + '/*')
 
 result_file_list = [result_file.split('/')[-1] for result_file in result_files]
@@ -153,7 +153,7 @@ for task in ['zh_table']:
 
 
 # Medcase Acc
-with open('/ailab/user/sunhongli/workspace/MedLongContextEval/dataset/raw_data/zh_medcase/answer_correct.json', 'r', encoding='utf-8') as f:
+with open('../../dataset/raw_data/zh_medcase/answer_correct.json', 'r', encoding='utf-8') as f:
     supplement_answers = json.loads(f.read())
 supplement_answers = {int(k): v for k, v in supplement_answers.items()}
 SPLITS = [',','，',';','；','、','+',' ']
@@ -254,59 +254,3 @@ print(json.dumps(task_model_ssm_socre, ensure_ascii=False, indent=4))
 with open('task_result_ssm_score.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(task_model_ssm_socre, ensure_ascii=False, indent=4))
 
-
-# EN.KG ZH.KG EN.Term ZH.Term ZH.Case ZH.Table
-for model in model2maxlen:
-    print(model)
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['en_kg'][model][0] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['en_kg'][model][1] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['en_kg'][model][2] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_kg'][model][0] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_kg'][model][1] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_kg'][model][2] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['en_norm'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_norm'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_medcase'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_table'][model][0] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_table'][model][1] * 100), end=' ')
-    print('&', end=' ')
-    print('%.2f' % (task_model_score['zh_table'][model][2] * 100), end=' ')
-    print('\\\\')
-print('\n')
-
-for model in model2maxlen:
-    print(model)
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['en_kg'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['zh_kg'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['en_norm'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['zh_norm'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['zh_medcase'][model] * 100), end=' ')
-    
-    print('&', end=' ')
-    print('%.2f' % (task_model_ssm_socre['zh_table'][model] * 100), end=' ')
-    print('\\\\')
