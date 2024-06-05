@@ -5,8 +5,4 @@ openai
 tiktoken
 anthropic
 transformers
-vllm
-ray
-packaging
-ninja
-flash-attn
+sentencepiece
