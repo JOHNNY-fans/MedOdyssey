@@ -16,11 +16,11 @@ model2maxlen = {
 
 token_len_list = [4000, 8000, 16000, 32000, 64000, 128000, 200000]
 position_list = [0, 25, 50, 75, 100]
-NIAH_BASE_DIR = '/ailab/user/sunhongli/workspace/MedLongContextEval/niah_result'
+NIAH_BASE_DIR = '../../evaluation_result/niah_result'
 niah_result_files = glob.glob(NIAH_BASE_DIR + '/*')
 
 # EN
-with open('/ailab/user/sunhongli/workspace/MedLongContextEval/dataset/task_data/needles/en_pure_needles.json', 'r', encoding='utf-8') as f:
+with open('../../dataset/task_data/needles/en_pure_needles.json', 'r', encoding='utf-8') as f:
     en_needles = json.loads(f.read())
 en_needles_new = {}
 for needle in en_needles:
@@ -95,7 +95,7 @@ for model in niah_result_model_length_depth_en:
 
 
 # ZH
-with open('/ailab/user/sunhongli/workspace/MedLongContextEval/dataset/task_data/needles/zh_pure_needles.json', 'r', encoding='utf-8') as f:
+with open('../../dataset/task_data/needles/zh_pure_needles.json', 'r', encoding='utf-8') as f:
     zh_needles = json.loads(f.read())
 zh_needles_new = {}
 for needle in zh_needles:
