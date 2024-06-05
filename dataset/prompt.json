@@ -1,0 +1,8 @@
+{
+    "zh_norm": "请完成医疗术语标准化任务，从给定的术语库中选出输入医疗名词对应的标准术语，标准化结果按照下面的JSON格式输出。\n{output_format}\n\n医疗名词：\n{mention}\n\n术语库：\n{concept_set}\n\n标准化结果：\n",
+    "en_norm": "Please complete the medical terminology normalization task by selecting the standard terminology that corresponds to the input medical noun from the given Termbase, and then output the normalized result in the following JSON format:.\n{output_format}\n\nMedical Noun:\n{mention}\n\nTermbase:\n{concept_set}\n\nNormalization result:\n",
+    "zh_kg": "给定一些三元组，格式为 实体1|关系|实体2，请找出能回答所提供问题的三元组，回答按照下面的JSON格式。给出的答案三元组仍需保持提供的格式。仅限从提供的三元组中给出答案，严禁给出答案JSON以外的内容。\n{output_format}\n\n三元组：\n{triplets}\n\n问题：\n{question}\n\n答案：\n",
+    "en_kg": "Given some triplets in the format Entity1|Relation|Entity2, please find the triplets that can answer the provided question. The answer is in the JSON format below. The given answer triplets must still be in the format provided. Answers can only be given from the provided triplets, and answers other than JSON are strictly prohibited.\n{output_format}\n\ntriplets：\n{triplets}\n\nQuesiton：\n{question}\n\nAnswer：\n",
+    "zh_table": "给定一些markdown格式的表格，请根据表格给出后续问题的答案。给出的答案需符合下面的JSON格式。仅限从提供的表格中给出答案，严禁给出未提供的内容，严禁给出额外内容。\n{output_format}\n\n表格：\n{tables}\n\n问题：\n{question}\n\n答案：\n",
+    "zh_medcase": "给定一些病例，请根据病例给出后续问题的答案。给出的答案需符合下面的JSON格式。仅限从提供的病例中给出答案，严禁给出未提供的内容，严禁给出额外内容。\n{output_format}\n\n病例：\n{medcases}\n\n问题：\n{question}\n\n答案：\n"
+}

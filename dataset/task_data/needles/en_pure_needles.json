@@ -1,0 +1,189 @@
+[
+    {
+        "needle": "Located at the Dream Bar in the Penacony Daydream Hotel, there is a bar manager named Shuweng.",
+        "input": "Who is the manager of the Dream Bar in the Penacony Daydream Hotel?",
+        "ground_truth": [
+            "Shuweng"
+        ],
+        "type": "general",
+        "id": 0
+    },
+    {
+        "needle": "Aventurine is a senior official in the Strategic Investment Department of the Galactic Peace Corporation. He owns an 'Aventurine Stone' and is part of the 'Ten Stonehearts' team.",
+        "input": "Which team within the Galactic Peace Corporation does Aventurine, the owner of the 'Aventurine stone', belong to?",
+        "ground_truth": [
+            "'Ten Stonehearts'",
+            "Ten Stonehearts"
+        ],
+        "type": "general",
+        "id": 1
+    },
+    {
+        "needle": "At the 'Harmony Grand Ceremony' in Penacony, a lady with purple hair, who calls herself the 'Galaxy Ranger', attended. She is known as Acheron, but her real name is Raiden Bosenmori Mei.",
+        "input": "What is the real name of the purple-haired lady known as the 'Galaxy Ranger' who attended the 'Harmony Grand Ceremony' in Penacony?",
+        "ground_truth": [
+            "Raiden Bosenmori Mei"
+        ],
+        "type": "general",
+        "id": 2
+    },
+    {
+        "needle": "Locufox Forest Backdoor in the Xianzhou Luofu, there is a group of 'Monster Legion', including one Mara-Struck Warden and two 'Mara-Struck Soldier'.",
+        "input": "What are the two monsters in the 'Monster Legion' behind the Fox Talk Forest in the Xianzhou Luofu?",
+        "ground_truth": [
+            "Mara-Struck Soldier",
+            "two 'Mara-Struck Soldier'",
+            "two Mara-Struck Soldiers"
+        ],
+        "type": "general",
+        "id": 3
+    },
+    {
+        "needle": "In Elio's script, there are three nameless guests who got off the Astral Express in Penacony: 1. Razarina Jane Estella, a ex-surveyor aboard the Astral Express and a young scholar, brimming with enthusiasm and curiosity. 2. Breukelen Tiernan, the former guard of the Astral Express and a outstanding gunslinger. 3. Mikhail Char Legwork, Former mechanic of the Astral Express, and the legendary big shot of Penacony, 'the Watchmaker'.",
+        "input": "Who is 'the Watchmaker' of Penacony?",
+        "ground_truth": [
+            "Mikhail Char Legwork"
+        ],
+        "type": "general",
+        "id": 4
+    },
+    {
+        "needle": "Clockboy is the most famous cartoon character in Pinoconi, originating from the long-running animation series 'Clockboy and His Friends', which has over 10,000 episodes and is a symbol of Pinoconi. The character is based on the 'Clockmaker' Lagvok Charles Mikhail, who is known as the father of Pinoconi.",
+        "input": "Which animation series features the cartoon character Clockboy?",
+        "ground_truth": [
+            "'Clockboy and His Friends'",
+            "Clockboy and His Friends"
+        ],
+        "type": "general",
+        "id": 5
+    },
+    {
+        "needle": "The Warp Trotter is a cross-dimensional creature lost among the stars, with a gentle nature and sweet taste, but it is inedible. It spends most of its life eating and fleeing. Travelers who encounter it consider it a good omen.",
+        "input": "Can the Warp Trotter be eaten? (Answer yes or no)",
+        "ground_truth": [
+            "No"
+        ],
+        "type": "general",
+        "id": 6
+    },
+    {
+        "needle": "The Relic 'Sprightly Vonwacq' contains Wacq Island, it was the most well-known island on Planet Vonwacq and teems with plant life. On the island was a gigantic tree called Thestang, bearing fruits that would give birth to the various kinds of the island's wildlife.",
+        "input": "On which island is the tree named 'Sisten' located?",
+        "ground_truth": [
+            "Wacq Island"
+        ],
+        "type": "general",
+        "id": 7
+    },
+    {
+        "needle": "Aha is the Aeon in charge of the Path of Joy, and it has a group of followers called the 'Masked Fools', but also a group of opponents called the 'Mourning Actors'. It once blew up the Astral Express of Akivili.",
+        "input": "Who once blew up the Astral Express?",
+        "ground_truth": [
+            "Aha"
+        ],
+        "type": "general",
+        "id": 8
+    },
+    {
+        "needle": "At the 'Penacony Grand Theater' in Penacony, Pom-Pom piloted the Astral Express (attacking by collision) and, along with other nameless guests, defeated Dominicus, the 'Harmonious Choir, The Great Septimus', who was disturbed by 'Order', resolving the crisis.",
+        "input": "Where did Pom-Pom use the train to collide with the Great Septimus in Penacony?",
+        "ground_truth": [
+            "Penacony Grand Theater"
+        ],
+        "type": "general",
+        "id": 9
+    },
+    {
+        "needle": "The major breast cancer report 'The role of racial and ethnic discrimination in breast cancer disparities' in The Lancet points out that there are serious inequalities in breast cancer treatment between low-income and high-income countries worldwide, with many groups being 'systematically abandoned', neglected, and even forgotten.",
+        "input": "'The role of racial and ethnic discrimination in breast cancer disparities' is a report from which journal?",
+        "ground_truth": [
+            "The Lancet",
+            "'The Lancet'"
+        ],
+        "type": "med",
+        "id": 10
+    },
+    {
+        "needle": "Prostate cancer has become a major cause of death and disability, accounting for 15% of all male cancers. 'The Lancet Commission on prostate cancer: planning for the surge in cases' report states that the number of global prostate cancer cases is expected to increase from 1.4 million annually in 2020 to 2.9 million annually in 2040, doubling the number of cases; the global annual number of prostate cancer deaths is expected to increase from 375,000 in 2020 to nearly 700,000 in 2040, an increase of about 85%.",
+        "input": "According to the latest report from The Lancet, prostate cancer accounts for what percentage of all male cancers? (Answer in Arabic numerals)",
+        "ground_truth": [
+            "15",
+            "15%"
+        ],
+        "type": "med",
+        "id": 11
+    },
+    {
+        "needle": "The Lancet Gastroenterology & Hepatology recently published a study on the duration of reduced colorectal cancer incidence and mortality risk after colonoscopy in Ontario, Canada. The study found that compared to those who did not undergo colonoscopy, individuals with negative colonoscopy results still had a lower risk of colorectal cancer incidence and mortality more than 15 years after the examination.",
+        "input": "What did the study in The Lancet on the duration of reduced colorectal cancer incidence and mortality risk after colonoscopy in Ontario, Canada find?",
+        "ground_truth": [
+            "Compared to those who did not undergo colonoscopy, individuals with negative colonoscopy results still had a lower risk of colorectal cancer incidence and mortality more than 15 years after the examination."
+        ],
+        "type": "med",
+        "id": 12
+    },
+    {
+        "needle": "The Lancet Diabetes & Endocrinology recently published a study comparing advanced hybrid closed-loop therapy and standard insulin therapy in pregnant women with type 1 diabetes. The study found that for pregnant women starting strict blood glucose control, advanced hybrid closed-loop therapy did not improve overall time in target range but improved overnight time in target range, reduced time below target range, and increased treatment satisfaction. These data suggest that MiniMed 780G (an advanced hybrid closed-loop therapy) can be safely used during pregnancy and offers some additional benefits compared to standard insulin therapy; however, it is important to improve the algorithm to better meet pregnancy requirements.",
+        "input": "In the study from The Lancet comparing advanced hybrid closed-loop therapy and standard insulin therapy in pregnant women with type 1 diabetes, which therapy improved the overnight time in target range?",
+        "ground_truth": [
+            "Advanced hybrid closed-loop therapy"
+        ],
+        "type": "med",
+        "id": 13
+    },
+    {
+        "needle": "The Lancet Child & Adolescent Health recently published a study on the relationship between academic achievement goals and adolescent depression symptoms. The study found that adolescents' depression symptoms are related to their academic achievement goals, which may be a target risk factor for future trials to investigate whether school interventions aimed at enhancing mastery goals (i.e., learning skills and understanding subjects rather than assessing abilities compared to peers) can prevent adolescent depression.",
+        "input": "According to the recent study from The Lancet Child & Adolescent Health, what are adolescents' depression symptoms related to?",
+        "ground_truth": [
+            "Their academic achievement goals",
+            "academic achievement goals"
+        ],
+        "type": "med",
+        "id": 14
+    },
+    {
+        "needle": "The following is a doctor-patient chat record from March 2020\n\nPatient:\nDizzy and bloated, stomach uncomfortable without diarrhea (male, 16 years old)\n\nDoctor:\nHello, how long has this been going on? Any vomiting?\nHow is your sleep?\n\nPatient:\nNo vomiting, sleep is okay, it's been 2 days\n\nDoctor:\nIs it a light dizziness or a spinning dizziness?\n\nPatient:\nSometimes, just a little bit\n\nDoctor:\nHave you caught a cold recently?\n\nPatient:\nYes\nA bit of a cold\n\nDoctor:\nIf you have caught a cold, take antiviral medication to treat the cold and observe. Also check if you have cervical spondylosis\n\nPatient:\nOkay, thank you doctor\n\nDoctor:\nFrequent head-down posture playing on your phone, gaming, leads to insufficient blood supply to the brain, causing dizziness\nYou're welcome\n\nPatient:\nYes\n\nDoctor:\nPlease give a good review if you have time, thank you",
+        "input": "In the March 2020 doctor-patient chat record, what medication did the doctor recommend for treating the cold?",
+        "ground_truth": [
+            "Antiviral medication"
+        ],
+        "type": "med",
+        "id": 15
+    },
+    {
+        "needle": "The following is a doctor-patient chat record from March 2020\n\nPatient:\nIs it necessary to undergo microwave and radiofrequency treatment for neurogenic tinnitus? (male, 23 years old)\n\nDoctor:\nHello, professionally there is no such thing as neurogenic tinnitus, it's neurogenic deafness and tinnitus. How long have you had tinnitus?\n\nPatient:\nOne week\n\nDoctor:\nAny changes in hearing?\n\nPatient:\nNo\nI can hear, but there is a buzzing sound\n\nDoctor:\nIs it constant or intermittent?\n\nPatient:\nConstant\n\nDoctor:\nShort-term tinnitus can still be treated, using medication to improve microcirculation and nourish the nerves, supplemented by microwave and acoustic therapy, generally showing improvement. Also, make sure to rest well and avoid fatigue\n\nPatient:\nBut these treatments are too expensive, I just started an internship and can't afford it. Are there any unnecessary treatments in my current regimen: 1. microwave therapy 2. radiofrequency therapy 3. outpatient intravenous infusion 4. nerve plexus block\n\nDoctor:\nShort-term tinnitus is still recommended to be treated, the nerve-nourishing and microcirculation-improving drugs are indeed expensive. However, if you feel the tinnitus does not affect your normal life, you can ignore it",
+        "input": "In the doctor-patient chat record from April 2021, what disease is the patient consulting about?",
+        "ground_truth": [
+            "Neurogenic tinnitus"
+        ],
+        "type": "med",
+        "id": 16
+    },
+    {
+        "needle": "The following is a doctor-patient chat record from May 2019\n\nPatient:\nJust had a C-section 9 days ago. Today, the hospital check showed a bit of high blood pressure. Systolic 140, diastolic 96, still breastfeeding, what can I eat postpartum that is good? (female, 27 years old)\n\nDoctor:\nLabetalol is okay to take...\n\nPatient:\nWhat about food, what can I eat?\n\nDoctor:\nControl salt intake, avoid foods that promote blood circulation, no other restrictions\n\nThe following is a doctor-patient chat record from April 2019\n\nPatient:\nDoctor, I'm back again, today I had a urine routine test, occult blood 1+, is it serious? (female, 25 years old)\n\nDoctor:\nHave you had this test before? When was your last menstrual period?\n\nPatient:\nNo, just today\n\nDoctor:\nOkay\n\nPatient:\nThis month on the 15th, there was still a little bit yesterday\n\nDoctor:\nOh, then it may be related to your period, it's okay, recheck the urine routine in half a month\n\nPatient:\nOkay, thank you doctor\n\nDoctor:\nYou're welcome",
+        "input": "In the April 2019 doctor-patient chat record, what test did the patient undergo?",
+        "ground_truth": [
+            "Urine routine test"
+        ],
+        "type": "med",
+        "id": 17
+    },
+    {
+        "needle": "The following is a doctor-patient chat record from 2023\n\nPatient:\nHello doctor, can cefuroxime axetil and ofloxacin be taken together? (male, 26 years old)\n\nDoctor:\nHello, yes, they can be taken together!!!\n\nPatient:\nAre there significant side effects from taking them together?\n\nDoctor:\nAny medication can have potential side effects, it varies from person to person",
+        "input": "In the 2023 doctor-patient conversation, how old is the patient? (Please answer in the format xx years old)",
+        "ground_truth": [
+            "26 years old"
+        ],
+        "type": "med",
+        "id": 18
+    },
+    {
+        "needle": "The following is a doctor-patient chat record from 2021\n\nPatient:\nJust had a C-section 9 days ago. Today, the hospital check showed a bit of high blood pressure. Systolic 140, diastolic 96, still breastfeeding, what can I eat postpartum that is good? (female, 27 years old)\n\nDoctor:\nLabetalol is okay to take...\n\nPatient:\nWhat about food, what can I eat?\n\nDoctor:\nControl salt intake, avoid foods that promote blood circulation, no other restrictions",
+        "input": "In 2021, a patient who had a C-section consulted a doctor about a high blood pressure treatment plan. What medication did the doctor recommend?",
+        "ground_truth": [
+            "Labetalol"
+        ],
+        "type": "med",
+        "id": 19
+    }
+]
