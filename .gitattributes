@@ -1,0 +1,6 @@
+dataset/raw_data/en_kg/2023ab_snomedct_rel.json filter=lfs diff=lfs merge=lfs -text
+./dataset/raw_data/en_kg/2023ab_snomedct_rel.json
+dataset/task_data/en_kg/target.json filter=lfs diff=lfs merge=lfs -text
+./dataset/task_data/en_kg/target.json
+.git/objects/pack/pack-b1b3171842fef05fee3b3f167a6431650a4685c0.pack filter=lfs diff=lfs merge=lfs -text
+./.git/objects/pack/pack-b1b3171842fef05fee3b3f167a6431650a4685c0.pack
