@@ -1,8 +1,4 @@
 import os
-os.environ['HTTP_PROXY']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['HTTPS_PROXY']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['http_proxy']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['https_proxy']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
 
 import re
 import copy
@@ -42,47 +38,17 @@ FORMAT_RETRY = 0
 
 ALL_CONCURRENT_LIMIT = 32
 
-# MODEL_NAME = 'claude-3-haiku-20240307'
-# MODEL_NAME = 'gpt-4-turbo-2024-04-09'
 MODEL_NAME = 'claude-3-sonnet-20240229'
-# MODEL_NAME = 'gpt-4o'
-# MODEL_NAME = 'gpt-3.5-turbo-0125'
-# MODEL_NAME = 'gpt-4o-2024-05-13'
-# MODEL_NAME = 'moonshot-v1-128k'
 
-# MODEL_NAME = 'chatglm3-6b-128k'
-# MODEL_NAME = 'gpt-4o'
-
-BASE_DIR = '/ailab/user/sunhongli/workspace/MedLongContextEval'
+BASE_DIR = 'workspace/MedLongContextEval'
 
 VERSION = 'v1'
 RESULT_FILE_NAME = os.path.join(BASE_DIR, 'niah_result', LANGUAGE + '_' + MODEL_NAME + '_' + VERSION + '.jsonl')
 
-OPENAI_BASE_URL = 'https://api.dstargpt.com/v1'
-OPENAI_API_KEY = 'sk-nyKp75atOaPKzCLBCaBa8cAc3cB9496fB8B95b563eB02aCf'
-
-# OPENAI_BASE_URL = 'https://api.gpt.ge/v1'
-# OPENAI_API_KEY = 'sk-zjDjS7pWcBf0Lo3U50B56885080c4353A9272fAf89A1D734'
-
-# OPENAI_BASE_URL = 'https://api.moonshot.cn/v1'
-# OPENAI_API_KEY = 'sk-J6Qp2qwhez7joRxhFva6tPHQioBVCBMv6H7HuTp5qmMxQAaU'
-
-# OPENAI_BASE_URL = 'http://139.196.50.48:50051/v1'
-# OPENAI_API_KEY = 'sshhhll'
+OPENAI_BASE_URL = 'openai/base/url'
+OPENAI_API_KEY = 'openai-key'
 
 tokenizer = TokenzierForLength(MODEL_NAME)
-
-# heystack_dir = os.path.join(BASE_DIR, 'dataset', 'raw_data', 'en_guidelines') if LANGUAGE == 'en' else os.path.join(BASE_DIR, 'dataset', 'raw_data', 'zh_book')
-
-# heystack_str_total = ''
-# heystack_files = glob.glob(heystack_dir + '/*.md')
-# for heystack_file in heystack_files:
-#     with open(heystack_file, 'r', encoding='utf-8') as f:
-#         heystack_str = f.read()
-#         heystack_str = re.sub(r'\n+', '\n', heystack_str)
-#         heystack_str = heystack_str.replace('\\x','\n')
-#         heystack_str_total += heystack_str
-
 
 zh_heystack_file_name_list = ['(6.1.2-02453).本草-本草经-本经注释.《神农本草经百种录》.徐大椿.md',
 '(6.2.4-02573).本草-综合本草-清代本草.《本草纲目拾遗》(十卷).赵学敏.md',
@@ -250,8 +216,6 @@ async def get_ans(heystack, needle, position, context_length, context_token_leng
         input_str = task_prompt_str + context_prefix_str + needle_str + context_suffix_str + question_str
 
     input_token_length = await tokenizer.token_len(input_str)
-
-    # print('处理前：', context_length_origin, '\n', '处理后：', len(input_str), '\n---------\n')
 
     if input_token_length > model2maxlen[model_name]:
         pred_origin = ''
