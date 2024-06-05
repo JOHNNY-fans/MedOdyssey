@@ -1,8 +1,4 @@
 import os
-os.environ['HTTP_PROXY']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['HTTPS_PROXY']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['http_proxy']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
-os.environ['https_proxy']='https://sunhongli:Tiankong1234@blsc-proxy.pjlab.org.cn:13128'
 
 import re
 import json
@@ -25,44 +21,16 @@ API_RETRY = 20
 
 # 并发数
 ALL_CONCURRENT_LIMIT = 32
-# API_CONCURRENT_LIMIT = 1
 
-
-# MODEL_NAME = 'claude-3-haiku-20240307'
-# MODEL_NAME = 'gpt-4-turbo-2024-04-09'
 MODEL_NAME = 'claude-3-sonnet-20240229'
-# MODEL_NAME = 'gpt-3.5-turbo-0125'
-# MODEL_NAME = 'gpt-4o'
-# MODEL_NAME = 'moonshot-v1-128k'
-
-# MODEL_NAME = 'chatglm3-6b-128k'
-# MODEL_NAME = 'Yarn-Mistral-7b-128k'
-# MODEL_NAME = 'internlm2-chat-7b'
 
 TASK_NAME_LIST = ['zh_norm', 'en_norm', 'zh_kg', 'en_kg', 'zh_table', 'zh_medcase', 'zh_counting', 'en_counting']
 TASK_NAME = 'en_counting'
 
-BASE_DIR = '/ailab/user/sunhongli/workspace/MedLongContextEval/dataset/task_data'
-# MODEL_DIR_BASE = '/ailab/user/sunhongli/weights/'
+BASE_DIR = 'dataset/task_data'
 
-OPENAI_BASE_URL = 'https://api.dstargpt.com/v1'
-OPENAI_API_KEY = 'sk-nyKp75atOaPKzCLBCaBa8cAc3cB9496fB8B95b563eB02aCf'
-
-# OPENAI_BASE_URL = 'https://api.gpt.ge/v1'
-# OPENAI_API_KEY = 'sk-zjDjS7pWcBf0Lo3U50B56885080c4353A9272fAf89A1D734'
-
-# OPENAI_BASE_URL = 'https://api.moonshot.cn/v1'
-# OPENAI_API_KEY = 'sk-J6Qp2qwhez7joRxhFva6tPHQioBVCBMv6H7HuTp5qmMxQAaU'
-
-# openai_client = AsyncOpenAI(
-#     base_url='https://api.moonshot.cn/v1',
-#     api_key='sk-J6Qp2qwhez7joRxhFva6tPHQioBVCBMv6H7HuTp5qmMxQAaU',
-# )
-
-# openai_client = AsyncOpenAI(
-#     base_url='http://10.254.30.46:39250/v1',
-#     api_key='sshhhll',
-# )
+OPENAI_BASE_URL = 'openai/base/url'
+OPENAI_API_KEY = 'openai-key'
 
 
 tokenizer = TokenzierForLength(MODEL_NAME)
@@ -95,7 +63,6 @@ def format_check(markdown: str):
 
 async def api_and_formatcheck(question_str, model_name, retry=30):
     pred_origin = await openai_api(question_str, model_name, OPENAI_BASE_URL, OPENAI_API_KEY, API_RETRY, STREAM)
-    # pred_origin = openai_api_sync(question_str, model_name, OPENAI_BASE_URL, OPENAI_API_KEY, API_RETRY, STREAM)
     if format_check(pred_origin):
         pred_answer = []
         for x in find_dicts(pred_origin):
@@ -203,9 +170,6 @@ async def get_ans(que, task_name, base_dir, model_name, result_file_name):
             raise ValueError('Unknown task name')
     
     token_length = await tokenizer.token_len(question_str)
-    # print(token_length)
-    # print(que_input)
-    # print(token_length)
 
     if token_length > model2maxlen[model_name]:
         pred_origin = ''
@@ -214,8 +178,7 @@ async def get_ans(que, task_name, base_dir, model_name, result_file_name):
     else:
         pred_origin, pred_answer, right_format = await api_and_formatcheck(question_str, model_name, FORMAT_RETRY)
         note = '' if right_format else 'wrong format'
-    
-    # write2jsonl_sync(
+
     await write2jsonl(
         {
             'id': que_id,
