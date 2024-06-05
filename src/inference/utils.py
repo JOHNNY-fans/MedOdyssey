@@ -7,7 +7,7 @@ import aiofiles
 import random
 from openai import AsyncOpenAI, OpenAI
 
-MODEL_DIR_BASE = '/ailab/user/sunhongli/weights/'
+MODEL_DIR_BASE = '../weights/'
 HTTP_CONCURRENT_LIMIT = 32
 API_CONCURRENT_LIMIT = 32
 API_RETRY = 20
@@ -172,7 +172,7 @@ class TokenzierForLength:
                 })
             headers = {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer sk-J6Qp2qwhez7joRxhFva6tPHQioBVCBMv6H7HuTp5qmMxQAaU'
+                'Authorization': 'Bearer key'
                 }
             res = await http_request("POST", url, payload, headers, retry=API_RETRY)
             print(res)
