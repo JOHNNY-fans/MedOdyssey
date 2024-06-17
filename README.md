@@ -1,4 +1,4 @@
-# MedOdyssey
+# MedOdyssey: A Medical Domain Benchmark for Long Context Evaluation Up to 200K Tokens
 
 ## Overall architecture and evaluation results. [architecture and overall results](./figure/dataset_and_result_radar.pdf).
 
