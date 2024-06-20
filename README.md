@@ -8,9 +8,19 @@ Welcome to MedOdyssey, a medical long-context benchmark with seven length levels
 </div>
 
 ## Dataset Statistics. 
-<div align="center">
-  <img src="./figure/dataset.jpg" width="480px">
-</div>
+| Task         | Annotation    | # Examples        | Avg. Len     | MIC | NFI | CIR | Eval Metrics  |
+|--------------|---------------|-------------------|--------------|-----|-----|-----|---------------|
+| En.NIAH      | Auto & Human  | 20×7×5            | 179.2k/32    | ✔   | ✔   | ✘   | Acc.          |
+| Zh.NIAH      | Auto & Human  | 20×7×5            | 45.6k/10.2   | ✔   | ✔   | ✘   | Acc.          |
+| En.Counting  | Auto          | 4×7               | 179.0k/13.6  | ✔   | ✘   | ✔   | Acc.          |
+| Zh.Counting  | Auto          | 4×7               | 45.6k/12.3   | ✔   | ✘   | ✔   | Acc.          |
+| En.KG        | Auto & Human  | 100               | 186.4k/68.8  | ✔   | ✘   | ✔   | P., R., F1.   |
+| Zh.KG        | Auto & Human  | 100               | 42.5k/2.0    | ✔   | ✘   | ✔   | P., R., F1.   |
+| En.Term      | Auto          | 100               | 183.1k/11.7  | ✔   | ✘   | ✘   | Acc.          |
+| Zh.Term      | Auto          | 100               | 32.6k/7.0    | ✔   | ✘   | ✘   | Acc.          |
+| Zh.Case      | Auto & Human  | 100               | 47.7k/1.3    | ✔   | ✘   | ✘   | Acc.          |
+| Zh.Table     | Auto & Human  | 100               | 53.6k/1.4    | ✔   | ✘   | ✘   | P., R., F1.   |
+
 Here are the dataset statistics, where "MIC" is short for **M**aximum **I**dentical **C**ontext, "NFI" is short for **N**ovel **F**acts **I**njection, and "CIR" is short for **C**ounter-**i**ntuitive **R**easoning.
 
 ## Baselines
