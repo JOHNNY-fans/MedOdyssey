@@ -7,7 +7,7 @@ Welcome to MedOdyssey, a medical long-context benchmark with seven length levels
   <img src="./figure/arc.png" width="480px">
 </div>
 
-## Dataset Statistics. 
+## Dataset Statistics
 | Task         | Annotation    | # Examples        | Avg. Len     | MIC | NFI | CIR | Eval Metrics  |
 |--------------|---------------|-------------------|--------------|-----|-----|-----|---------------|
 | En.NIAH      | Auto & Human  | 20×7×5            | 179.2k/32    | ✔   | ✔   | ✘   | Acc.          |
@@ -42,12 +42,12 @@ We researched current state-of-the-art long-context LLMs and presented the perfo
 
 - **Yarn-Mistral-7b-128k**: Developed by NousResearch and released in November 2023. It is further pre-trained on long context data for 1500 steps using the YaRN extension method based on Mistral-7B-v0.1 and supports a 128k token context window.
 
-## Overall Evaluation Results. 
+## Overall Evaluation Results
 <div align="center">
   <img src="./figure/radar.png" width="480px">
 </div>
 
-## Main Results of Needles in a Haystack. 
+## Main Results of Needles in a Haystack
 Notes: The default is the exact string-matching strategy and SSM is the subset string-matching strategy.
 <div align="center">
   <img src="./figure/niah.png" width="480px">
