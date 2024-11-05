@@ -55,3 +55,14 @@ Notes: The default is the exact string-matching strategy and SSM is the subset s
 <div align="center">
   <img src="./figure/niah_ssm.png" width="480px">
 </div>
+
+## Citation
+Thank you for your interest, if you use this project, please give us a 🌟 and cite the following paper:
+
+```bibtex 
+@misc{2406.15019,
+Author = {Yongqi Fan and Hongli Sun and Kui Xue and Xiaofan Zhang and Shaoting Zhang and Tong Ruan},
+Title = {MedOdyssey: A Medical Domain Benchmark for Long Context Evaluation Up to 200K Tokens},
+Year = {2024},
+Eprint = {arXiv:2406.15019},
+}
