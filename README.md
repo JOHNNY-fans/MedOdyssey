@@ -63,10 +63,10 @@ Notes: The default is the exact string-matching strategy and SSM is the subset s
   <img src="./figure/niah_table.png" width="1080px">
 </div>
 <div align="center">
-  <img src="./figure/niah.png" width="480px">
+  <img src="./figure/niah.png" width="1080px">
 </div>
 <div align="center">
-  <img src="./figure/niah_ssm.png" width="480px">
+  <img src="./figure/niah_ssm.png" width="1080px">
 </div>
 
 ## Citation
