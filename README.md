@@ -54,13 +54,13 @@ leveraging cold-start data alongside iterative RL fine-tuning. (deepseek-reasone
 
 ## Main Results of Medical-related Tasks
 <div align="center">
-  <img src="./figure/tasks.png" width="480px">
+  <img src="./figure/tasks.png" width="1080px">
 </div>
 
 ## Main Results of Needles in a Haystack
 Notes: The default is the exact string-matching strategy and SSM is the subset string-matching strategy.
 <div align="center">
-  <img src="./figure/niah_table.png" width="480px">
+  <img src="./figure/niah_table.png" width="1080px">
 </div>
 <div align="center">
   <img src="./figure/niah.png" width="480px">
