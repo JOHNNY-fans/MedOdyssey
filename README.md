@@ -26,6 +26,11 @@ Here are the dataset statistics, where "MIC" is short for **M**aximum **I**denti
 ## Baselines
 We researched current state-of-the-art long-context LLMs and presented the performance of two kinds of baseline LLMs in MedOdyssey. For closed-source commercial LLMs, we call the official APIs to get the responses for each task. We also deployed open-source models for inference on our own. The LLMs and versions we selected are as follows:
 
+- **DeepSeek-R1**: Released in 
+January 2025, DeepSeek-R1-Zero represents a pure RL approach without relying on cold-start
+data, achieving strong performance across various tasks. DeepSeek-R1 is more powerful,
+leveraging cold-start data alongside iterative RL fine-tuning. (deepseek-reasoner 2025-01-20)
+
 - **GPT-4**: Released in March 2023, GPT-4 is a state-of-the-art language model developed by OpenAI. It supports a context window length of 8,192 tokens, which was extended to 128k in the November 2023 update. (gpt-4-turbo-2024-04-09)
 
 - **GPT-4o**: An optimized variant of GPT-4, GPT-4o was introduced in May 2024, has a 128k context window, and has a knowledge cut-off date of October 2023. (gpt-4o-2024-05-13)
@@ -47,8 +52,16 @@ We researched current state-of-the-art long-context LLMs and presented the perfo
   <img src="./figure/radar.png" width="480px">
 </div>
 
+## Main Results of Medical-related Tasks
+<div align="center">
+  <img src="./figure/tasks.png" width="480px">
+</div>
+
 ## Main Results of Needles in a Haystack
 Notes: The default is the exact string-matching strategy and SSM is the subset string-matching strategy.
+<div align="center">
+  <img src="./figure/niah_table.png" width="480px">
+</div>
 <div align="center">
   <img src="./figure/niah.png" width="480px">
 </div>
