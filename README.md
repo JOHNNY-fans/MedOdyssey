@@ -73,9 +73,24 @@ Notes: The default is the exact string-matching strategy and SSM is the subset s
 Thank you for your interest, if you use this project, please give us a 🌟 and cite the following paper:
 
 ```bibtex 
-@misc{2406.15019,
-Author = {Yongqi Fan and Hongli Sun and Kui Xue and Xiaofan Zhang and Shaoting Zhang and Tong Ruan},
-Title = {MedOdyssey: A Medical Domain Benchmark for Long Context Evaluation Up to 200K Tokens},
-Year = {2024},
-Eprint = {arXiv:2406.15019},
+@inproceedings{fan-etal-2025-medodyssey,
+    title = "{M}ed{O}dyssey: A Medical Domain Benchmark for Long Context Evaluation Up to 200{K} Tokens",
+    author = "Fan, Yongqi  and
+      Sun, Hongli  and
+      Xue, Kui  and
+      Zhang, Xiaofan  and
+      Zhang, Shaoting  and
+      Ruan, Tong",
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2025",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-naacl.3/",
+    pages = "32--56",
+    ISBN = "979-8-89176-195-7",
+    abstract = "Numerous advanced Large Language Models (LLMs) now support context lengths up to 128K, and some extend to 200K. Some benchmarks in the generic domain have also followed up on evaluating long-context capabilities. In the medical domain, tasks are distinctive due to the unique contexts and need for domain expertise, necessitating further evaluation. However, despite the frequent presence of long texts in medical scenarios, evaluation benchmarks of long-context capabilities for LLMs in this field are still rare. In this paper, we propose MedOdyssey, the first medical long-context benchmark with seven length levels ranging from 4K to 200K tokens. MedOdyssey consists of two primary components: the medical-context {\textquotedblleft}needles in a haystack{\textquotedblright} task and a series of tasks specific to medical applications, together comprising 10 datasets. The first component includes challenges such as counter-intuitive reasoning and novel (unknown) facts injection to mitigate knowledge leakage and data contamination of LLMs. The second component confronts the challenge of requiring professional medical expertise. Especially, we design the {\textquoteleft}{\textquotedblleft}Maximum Identical Context{\textquotedblright} principle to improve fairness by guaranteeing that different LLMs observe as many identical contexts as possible. Our experiment evaluates advanced proprietary and open-source LLMs tailored for processing long contexts and presents detailed performance analyses. This highlights that LLMs still face challenges and need for further research in this area. Our code and data are released in the repository: \url{https://github.com/JOHNNY-fans/MedOdyssey}."
 }
